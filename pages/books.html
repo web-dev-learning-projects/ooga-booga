@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet">
+        <link href="../styles.css" rel="stylesheet">
         <title>My Webpage | Books</title>
     </head>
     <body>
@@ -27,13 +27,172 @@
                 </div>
             </div>
         </nav>
-        <main class="container-xxl my-5">
-            <div class="book-card">
-                <img src="../assets/books/images" alt="metamorphism cover">
-                <p>
-                    
-                </p>
+        <main class="container my-5">
+            <div class="row justify-content-center g-4">
+               <div class="col-10 col-sm-6 col-md-4 col-lg-3" data-bs-toggle="modal" data-bs-target="#metamorphosisDetailModal">
+                    <div class="card book-card h-100">
+                        <img src="../assets/books/metamorphosis_cover.jpg" class="card-img-top book-cover" alt="metamorphosis cover">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Metamorphosis</h5>
+                            <p class="card-text"><i>~ Franz kafka</i></p>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-10 col-sm-6 col-md-4 col-lg-3" data-bs-toggle="modal" data-bs-target="#silentPatientDetailModal">
+                    <div class="card book-card h-100">
+                        <img src="../assets/books/silent_patient_cover.jpg" class="card-img-top book-cover" alt="Silent Patient">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">The Silent Patient</h5>
+                            <p class="card-text"><i>~ Alex Michaelides</i></p>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-10 col-sm-6 col-md-4 col-lg-3" data-bs-toggle="modal" data-bs-target="#whiteNightsModal">
+                    <div class="card book-card h-100">
+                        <img src="../assets/books/white_nights_cover.jpg" class="card-img-top book-cover" alt="white nights cove">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">White Nights</h5>
+                            <p class="card-text"><i>~ Fyodor Dostoevsky</i></p>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-10 col-sm-6 col-md-4 col-lg-3" data-bs-toggle="modal" data-bs-target="#TuesdayWithMorrieModal">
+                    <div class="card book-card h-100">
+                        <img src="../assets/books/tuesday_with_morrie_cover.jpg" class="card-img-top book-cover" alt="tuesday with morrie cove">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tuesday with Morrie</h5>
+                            <p class="card-text"><i>~ Mitch Albom</i></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
+
+        <!-- Modal -->
+        <div class="modal fade" id="metamorphosisDetailModal" tabindex="-1" aria-labelledby="metamorphosisDetailModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="metamorphosisDetailModalLabel">Metamorphosis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                    <div class="row g-3">
+                        <!-- Left: Full cover -->
+                        <div class="col-12 col-md-4 text-center">
+                        <img src="../assets/books/metamorphosis_cover.jpg" alt="Metamorphosis Cover" class="img-fluid rounded">
+                        </div>
+                        <!-- Right: Description -->
+                        <div class="col-12 col-md-8">
+                        <p>
+                            This book: at first I felt like I was going to read a witch story. When I learned he had turned into a cockroach, I was curious how it happened — but the story wasn’t really about the cockroach.  
+                            It moves into real-life struggles, jobs, and the usefulness of a man. I had hope that the story would change by the end of the night… but nothing really changes.  
+                            As you start to lose hope, you start to understand the book. In the end, it left me with lots of questions and a strange acceptance of life. It’s hard to categorize: neither depressing nor encouraging, with literally no story till the end. All you know is that Gregor turned into a cockroach — hope he doesn’t get late for work.
+                        </p>
+                        <p class="text-end">~ ^_^ Franz Kafka</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="silentPatientDetailModal" tabindex="-1" aria-labelledby="silentPatientDetailModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="silentPatientDetailModalLabel">The Silent Patient</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                    <div class="row g-3">
+                        <!-- Left: Full cover -->
+                        <div class="col-12 col-md-4 text-center">
+                        <img src="../assets/books/silent_patient_cover.jpg" alt="Silent patient Cover" class="img-fluid rounded">
+                        </div>
+                        <!-- Right: Description -->
+                        <div class="col-12 col-md-8">
+                        <p>
+                            When I started reading, I was immediately hooked: why did she shoot her husband? The opening scene is shocking, yet her relationship was described as loving, which made it even more mysterious. My questions kept piling up: why isn’t she speaking? Why did she kill him?
+                            <br>
+                            Then the psychotherapist enters the story, and I thought, “Now he’ll fix her!”… but it turns out he’s even more unpredictable than she is. He doesn’t get her to speak, but he triggers events that unravel everything. The timeline can be confusing in the middle, and the twisted human nature of love is… a bit disgusting at times.
+                            <br>
+                            By the end, all the curiosity and mystery pay off. Every question is answered, and you’re left thinking, “Ohhhh, that’s why… that’s how.” It’s shocking, clever, and incredibly satisfying.
+                        </p>
+                        <p class="text-end">~ (•_•) Alex Michaelides</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="whiteNightsModal" tabindex="-1" aria-labelledby="whiteNightsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="whiteNightsModalLabel">White Nights</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                    <div class="row g-3">
+                        <!-- Left: Full cover -->
+                        <div class="col-12 col-md-4 text-center">
+                        <img src="../assets/books/white_nights_cover.jpg" alt="White nights Cover" class="img-fluid rounded">
+                        </div>
+                        <!-- Right: Description -->
+                        <div class="col-12 col-md-8">
+                        <p>
+                            I picked this up out of FOMO, seeing it everywhere on social media. Having just read Kafka’s Metamorphosis, I didn’t have high hopes — but I held onto a little flicker of optimism. Big mistake.
+                            <br>
+                            The story starts with a seemingly ordinary man — I felt like I was him — and there’s a gentle, happy introvert vibe. Then he meets someone, and I thought, “Finally, it’s getting started… maybe a happy ending?” But no. As I read, the story became increasingly intense and triggering. I just wanted things to go well… and then BAM, the final lesson hits like a slap in the face.
+                            <br>
+                            By the end, I understood: don’t expect smiles from these Russian pens. Fyodor Dostoevsky turns all rainy, romantic moments into lifeless drops, leaving you with nothing but acceptance — and a deep, unforgettable experience.
+                        </p>
+                        <p class="text-end">~ Fyodor Dostoevsky</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="TuesdayWithMorrieModal" tabindex="-1" aria-labelledby="TuesdayWithMorrieModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TuesdayWithMorrieModalLabel">Tuesday with Morrie</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                    <div class="row g-3">
+                        <!-- Left: Full cover -->
+                        <div class="col-12 col-md-4 text-center">
+                        <img src="../assets/books/tuesday_with_morrie_cover.jpg" alt="Tuesday with Morrie Cover" class="img-fluid rounded">
+                        </div>
+                        <!-- Right: Description -->
+                        <div class="col-12 col-md-8">
+                        <p>
+                            I haven’t finished this one yet, but it already feels different. It’s not one of those “old wise man gives random spiritual lectures” books. Morrie’s more like that cool uncle who suddenly got hit by a wisdom punch — still funny, still kind, but now somehow deeper.
+                            <br>
+                            Instead of forcing life lessons down your throat, he just makes you think, laugh, and maybe cry a bit. It’s like he’s saying, “Be whoever you are, just don’t make dumb mistakes — and still enjoy whatever chaos the world throws at you.”
+                        </p>
+                        <p class="text-end">~ Mitch Albom</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
     </body>
 </html>
