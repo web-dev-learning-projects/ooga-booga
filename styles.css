@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main.flex-fill {
+    flex: 1 0 auto; /* makes main content expand to fill space */
+}
+
 nav{
     display: flex;
     background-color: aqua;
@@ -45,4 +58,26 @@ nav{
     border-top-right-radius: 10px;
     object-fit: cover;
     height: 200px; /* keeps all images equal height */
+}
+
+
+
+main.flex-fill {
+    flex: 1 0 auto; /* makes main content expand to fill space */
+}
+
+.footer {
+    flex-shrink: 0; /* ensures footer doesn’t shrink */
+    background-color: #f8f9fa;
+    font-size: 0.9rem;
+}
+
+.footer a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.footer i {
+    font-size: 1.2rem;
+    vertical-align: middle;
 }

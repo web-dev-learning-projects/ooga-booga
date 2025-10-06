@@ -27,8 +27,27 @@
                 </div>
             </div>
         </nav>
-        <main>
-            hello, Button
+        <main class="flex-fill"">
+            <div class="container"></div>
         </main>
+        <footer class="footer mt-5 py-3 border-top text-center text-muted">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center">
+            <div class="mb-2 mb-sm-0">
+                <a href="https://www.youtube.com/@yourchannel" target="_blank" rel="noopener noreferrer" class="text-muted mx-2">
+                    <i class="bi bi-youtube"></i> YouTube
+                </a>
+                <a href="https://github.com/yuyi-hao" target="_blank" rel="noopener noreferrer" class="text-muted mx-2">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
+            </div>
+            <small>
+                © <span id="year"></span> Yuyi Hao — Made for CS50x
+            </small>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
     </body>
 </html>
