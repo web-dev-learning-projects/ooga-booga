@@ -22,13 +22,26 @@
                         <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house"></i> &nbsp; Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="./books.html"><i class="bi bi-book"></i> &nbsp; Books</a></li>
                         <li class="nav-item"><a class="nav-link" href="./projects.html"><i class="bi bi-rocket"></i> &nbsp; Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i>😗</i> &nbsp;  Click it</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">😗 &nbsp;  Click it</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <main class="flex-fill"">
-            <div class="container"></div>
+        <main class="flex-fill">
+            <div class="container">
+                 <div class="text-center">
+                    <h2 class="mb-4">Pokémon Fortune Card</h2>
+                    <p>Enter your name and reveal your Pokémon destiny!</p>
+
+                    <div class="mb-3">
+                        <input autocomplete="off" autofocus type="text" id="playerName" class="form-control w-75 mx-auto" placeholder="Your name">
+                    </div>
+
+                    <button class="btn btn-primary" id="revealBtn">Reveal!</button>
+
+                    <div id="cardResult" class="mt-5"></div>
+                </div>
+            </div>
         </main>
         <footer class="footer mt-5 py-3 border-top text-center text-muted">
         <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center">
@@ -45,9 +58,58 @@
             </small>
         </div>
     </footer>
-
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        (() => {
+            const messages = [
+                "Pikachu says: PLACEHOLDER got struck by lightning ⚡",
+                "Charmander thinks PLACEHOLDER is on fire 🔥",
+                "Snorlax says: its PLACEHOLDER's nap time already? 😴",
+                "Jigglypuff hums PLACEHOLDER to sleep 🎵",
+                "Psyduck senses PLACEHOLDER's chaos 🌀",
+                "Bulbasaur thinks PLACEHOLDER needs some sunlight 🌿"
+            ];
+
+            const pokemonImages = [
+                "pikachu.jpg",
+                "charmander.png",
+                "snorlax.png",
+                "jigglypuff.jpg",
+                "Psyduck.png",
+                "bulbasaur.jpg"
+            ];
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+            const revealBtn = document.getElementById("revealBtn");
+            revealBtn.addEventListener("click", () => {
+                const name = document.getElementById("playerName").value;
+                if(name !== ""){
+                    const fortuneIdx = Math.floor(Math.random()*messages.length);
+                    const cardEle = document.createElement("div");
+                    
+                    document.getElementById("cardResult").innerHTML = `
+                    <div class="pokemon-card">
+                        <div class="pokemon-header">
+                            <h3> ${pokemonImages[fortuneIdx].split(".")[0]} </h3>
+                        </div>
+                        <div class="pokemon-image">
+                            <img src="../assets/pokemon/${pokemonImages[fortuneIdx]}" alt="${pokemonImages[fortuneIdx].split(".")[0]} image">
+                        </div>
+                        <div class="pokemon-quote">
+                            <p>${messages[fortuneIdx].replace("PLACEHOLDER", name)}</p>
+                        </div>
+                        <div class="pokemon-footer">
+                            <small>Trainer: ${name}</small>
+                        </div>
+                    </div>`;
+                }
+                else{
+                    document.getElementById("cardResult").innerText = "You suck human just name yourself if you don't have one";
+                    return;
+                }
+            });
+        })();
+
+
     </script>
     </body>
 </html>

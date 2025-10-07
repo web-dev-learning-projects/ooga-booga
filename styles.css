@@ -81,3 +81,44 @@ main.flex-fill {
     font-size: 1.2rem;
     vertical-align: middle;
 }
+
+
+.pokemon-card {
+  width: 300px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #fff, #f3f3f3);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+}
+
+.pokemon-header {
+  background: #f9d71c; /* Pikachu yellow */
+  padding: 10px;
+  font-weight: bold;
+}
+
+.pokemon-image img {
+  width: 150px;
+  margin: 15px auto;
+  display: block;
+}
+
+.pokemon-quote {
+  padding: 0 10px 15px;
+  font-style: italic;
+  color: #555;
+}
+
+.pokemon-footer {
+  background: #f1f1f1;
+  padding: 5px;
+  font-size: 0.8rem;
+  color: #666;
+}
