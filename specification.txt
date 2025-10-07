@@ -1,0 +1,35 @@
+HTML Tags Used:
+1. <nav>
+2. <img>
+3. <a>
+4. <p>
+5. <h1>
+6. <div>
+7. <footer>
+8. <button>
+9. <ul>
+10. <main>
+
+CSS Selectors Used:
+1. * (universal selector)
+2. nav
+3. .book-card
+4. .pokemon-card
+5. footer
+
+CSS Properties Used:
+1. margin
+2. padding
+3. background-color
+4. border-radius
+5. box-shadow
+
+Bootstrap Usage:
+Used Bootstrap for responsive navbar, grid system, cards, and modal components.
+
+JavaScript Usage:
+Used JavaScript to generate a random Pokémon card with a fun message when the user enters their name.
+
+Responsive Design:
+Implemented using Bootstrap grid and flex utilities to ensure compatibility on mobile and desktop.
+
